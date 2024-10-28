@@ -1,18 +1,26 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Item")]
+    [SerializeField] private string itemName;
+
+    private InventoryComponent inventory;
+
+    private void Start()
     {
-        
+        inventory = FindObjectOfType<InventoryComponent>();
+
+        inventory.AddItemToinventoryDict(itemName);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<InventoryComponent>();
+            inventory.PickUpItem(itemName);
+            Destroy(gameObject);
         }
     }
 }

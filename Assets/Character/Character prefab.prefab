@@ -42,8 +42,8 @@ Camera:
   m_GameObject: {fileID: 1622538570095991951}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.103858955, g: 0.106026985, b: 0.10943389, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -104,9 +104,10 @@ GameObject:
   - component: {fileID: 4689869498672955243}
   - component: {fileID: 8321937331644608467}
   - component: {fileID: 3520787009361581110}
+  - component: {fileID: 6758895590596404251}
   m_Layer: 0
   m_Name: Character prefab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,11 +188,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163426e5655f6cc4bacb24ae1e5e3158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 7.5
+  walkSpeed: 5
   lookSpeedX: 1
   rotationSpeedX: 0.1
   lowerLookClamp: 25
   upperLookClamp: 5
+--- !u!114 &6758895590596404251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2339154899835774796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91df273d8f37fdb4ea3eb0e84bcdf52d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6296648898026583987
 PrefabInstance:
   m_ObjectHideFlags: 0
