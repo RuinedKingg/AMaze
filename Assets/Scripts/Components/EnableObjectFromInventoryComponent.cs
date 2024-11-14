@@ -16,11 +16,14 @@ public class EnableObjectFromInventoryComponent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && other.GetComponent<InventoryComponent>().CheckItem(objectName))
+        if (other.CompareTag("Player"))
         {
-            Debug.Log($"Player set object {obj.name} active");
-            obj.SetActive(true);
-            gameObject.GetComponent<BoxCollider>().enabled = false;
+            if (other.GetComponent<InventoryComponent>().CheckItem(objectName))
+            {
+                Debug.Log($"Player set object {obj.name} active");
+                obj.SetActive(true);
+                gameObject.GetComponent<BoxCollider>().enabled = false;
+            }
         }
     }
 }
