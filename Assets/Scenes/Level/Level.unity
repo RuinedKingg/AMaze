@@ -2214,8 +2214,8 @@ Transform:
   m_GameObject: {fileID: 85884777}
   serializedVersion: 2
   m_LocalRotation: {x: -0.65328157, y: 0.27059808, z: 0.27059805, w: 0.65328145}
-  m_LocalPosition: {x: -46.43, y: 5.95953, z: -74.02142}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: -46.4365, y: 5.95953, z: -73.9825}
+  m_LocalScale: {x: 104.48, y: 107.5144, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2116929910}
@@ -2306,7 +2306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 2
-  localRotationVector3: {x: -90, y: 115, z: -45}
+  rotationVector3: {x: -90, y: 115, z: 45}
 --- !u!65 &85884783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27433,13 +27433,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 726369955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5230f371d04c07540885aefca7f6188b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b868c4e9058c8340923ec89b1ba179a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 0.5
   localZPosition: 0.00382
-  isReady: 0
-  tagName: Tnt
 --- !u!65 &726369961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39626,15 +39624,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5042525479920703560, guid: 0eb6848ca9109ac4394e4b62a9e5e2c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.8819346
+      value: 5.577
       objectReference: {fileID: 0}
     - target: {fileID: 5042525479920703560, guid: 0eb6848ca9109ac4394e4b62a9e5e2c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.813721
+      value: 9.155
       objectReference: {fileID: 0}
     - target: {fileID: 5042525479920703560, guid: 0eb6848ca9109ac4394e4b62a9e5e2c7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -38.35807
+      value: -38.753
       objectReference: {fileID: 0}
     - target: {fileID: 5042525479920703560, guid: 0eb6848ca9109ac4394e4b62a9e5e2c7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -45217,8 +45215,8 @@ Transform:
   m_GameObject: {fileID: 1206341309}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.086, y: 0.00127, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.086, y: 0.001266, z: -0}
+  m_LocalScale: {x: 1.066211, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1996972964}
@@ -70523,6 +70521,7 @@ GameObject:
   - component: {fileID: 1891766867}
   - component: {fileID: 1891766866}
   - component: {fileID: 1891766869}
+  - component: {fileID: 1891766870}
   m_Layer: 0
   m_Name: Elevator_door
   m_TagString: Interactable
@@ -70639,6 +70638,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.018539548, y: 0.02248237, z: 0.013665118}
   m_Center: {x: 0.009036646, y: -0.0001775232, z: -0.006251725}
+--- !u!114 &1891766870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891766864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d4218154e5374a419da910d8f48e015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 1
 --- !u!1 &1893479509
 GameObject:
   m_ObjectHideFlags: 0

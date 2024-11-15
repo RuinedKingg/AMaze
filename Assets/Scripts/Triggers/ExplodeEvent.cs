@@ -16,16 +16,20 @@ public class ExplodeEvent : MonoBehaviour
     void OnEnable()
     {
         SetupTntEvent.OnTntPlaced += SetReadyTrue;
+        Debug.Log("Subscribed event - OnTntPlaced");
     }
 
     void OnDisable()
     {
         SetupTntEvent.OnTntPlaced -= SetReadyTrue;
+        Debug.Log("Unsubscribed event - OnTntPlaced");
     }
 
     private void Start()
     {
-        isReady = GameObject.FindGameObjectWithTag(tagName).activeInHierarchy;
+        var tntObj = GameObject.FindGameObjectWithTag(tagName);
+        isReady = tntObj != null && tntObj.activeInHierarchy;
+        Debug.Log($"Is detonator ready: {isReady}");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -45,6 +49,7 @@ public class ExplodeEvent : MonoBehaviour
 
     private void SetReadyTrue()
     {
+        Debug.Log("Detonator ready");
         isReady = true;
     }
 }
