@@ -28,7 +28,7 @@ public class ActivateRocks : MonoBehaviour
 
     void Activate()
     {
-        body.constraints = RigidbodyConstraints.None;
+        body.isKinematic = false;
         body.AddExplosionForce(explosionForce, exploisionPosition, explosionRadius);
     }
 }
