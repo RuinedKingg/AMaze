@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ExplodeEvent : MonoBehaviour
 {
-    [Header("DOTween parametres")]
+    [Header("DOTween parameters")]
     [SerializeField] private float duration = 0.5f;
     [SerializeField] private float localZPosition = 0.00382f;
 

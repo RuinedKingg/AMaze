@@ -1,20 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EscapeMines : MonoBehaviour
 {
-    [Header("Scene parametre")]
-    [SerializeField] private int sceneIndex = 0;
+    [Header("Scene parameters")]
+    [SerializeField] private int sceneIndex;
+
+    void OnEnable()
+    {
+        TurnOnGeneratorEvent.OnGeneratorOn += ActivateColider;
+        Debug.Log("Subscribed event - OnDetonate");
+    }
+
+    void OnDisable()
+    {
+        TurnOnGeneratorEvent.OnGeneratorOn -= ActivateColider;
+        Debug.Log("Unsubscribed event - OnDetonate");
+    }
+
+    
+    void ActivateColider()
+    {
+        GetComponent<BoxCollider>().enabled = true;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(SceneManager.GetSceneByBuildIndex(sceneIndex).name);
-
-        if (other.CompareTag("Player") && SceneManager.GetSceneByBuildIndex(sceneIndex).buildIndex != -1)
+        if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnableObject : MonoBehaviour
 {
-    [Header("Object")]
+    [Header("Object parameters")]
     [SerializeField] private GameObject obj;
 
     private void OnTriggerEnter(Collider other)

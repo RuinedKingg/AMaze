@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Explosion02
   m_Shader: {fileID: 4800000, guid: c22ebc2de4a4f064ca891431bd16222c, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 0
@@ -17,11 +19,12 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _Explosion_Tex:
-        m_Texture: {fileID: 2800000, guid: 33df5f80306e7434fa2637f64304fa26, type: 3}
+        m_Texture: {fileID: 2800000, guid: 239a6100f7547b845bd56e4160f2e933, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
