@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ActivateRocks : MonoBehaviour
 {
-    [Header("Explosion parametres")]
+    [Header("Explosion parameters")]
     [SerializeField] private float explosionForce = 1.0f;
     [SerializeField] private float explosionRadius = 1.0f;
     [SerializeField] private Vector3 exploisionPosition = Vector3.zero;

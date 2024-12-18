@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnableObjectFromInventoryComponent : MonoBehaviour
 {
-    [Header("Object")]
+    [Header("Object parameters")]
     [SerializeField] string objectName;
 
     GameObject obj;

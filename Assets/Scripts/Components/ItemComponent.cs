@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ItemComponent : MonoBehaviour
 {
-    [Header("Item")]
+    [Header("Item parameters")]
     [SerializeField] private string itemName;
 
     private InventoryComponent inventory;
