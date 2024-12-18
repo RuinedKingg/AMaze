@@ -9,13 +9,13 @@ public class EscapeMines : MonoBehaviour
     void OnEnable()
     {
         TurnOnGeneratorEvent.OnGeneratorOn += ActivateColider;
-        Debug.Log("Subscribed event - OnDetonate");
+        Debug.Log("Subscribed event - OnGeneratorOn");
     }
 
     void OnDisable()
     {
         TurnOnGeneratorEvent.OnGeneratorOn -= ActivateColider;
-        Debug.Log("Unsubscribed event - OnDetonate");
+        Debug.Log("Unsubscribed event - OnGeneratorOn");
     }
 
     
@@ -28,6 +28,7 @@ public class EscapeMines : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Destroy(GameObject.Find("UI"));
             SceneManager.LoadScene(sceneIndex);
         }
     }

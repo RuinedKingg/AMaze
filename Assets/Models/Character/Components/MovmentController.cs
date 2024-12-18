@@ -37,6 +37,12 @@ public class MovmentController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButton("Quit"))
+        {
+            Debug.Log("Quit");
+            Quit();
+        }
+
         if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
         {
             animator.SetBool("isMoving", true);
@@ -84,5 +90,10 @@ public class MovmentController : MonoBehaviour
     private void ApplyFinalMovment()
     {
         characterController.Move(moveDirection * Time.deltaTime);
+    }
+
+    private void Quit()
+    {
+        Application.Quit();
     }
 }
